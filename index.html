@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 
 <head>
-		<meta charset="UTF-8">
+    <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
@@ -11,45 +11,81 @@
     <script src="index.js"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Gamja+Flower&display=swap');
-        
+
         * {
             font-family: 'Gamja Flower', cursive;
         }
-        
+
         body {
             background: linear-gradient(wheat, white);
             /* background-image: url("https://www.eyeonasia.gov.sg/images/china-selected/nanjing-profile.jpg"); */
             background-repeat: no-repeat;
             background-size: cover;
-
-            color: black;
         }
 
-        .time{
+        ul li {
+            display: inline-block;
+            width: 180px;
+        }
+        a:link {
+            color: pink;
+        }
+        a:visited {
+            color: black;
+        }
+        a:hover {
+            color: red;
+        }
+        a:active {
+            color: green
+        }
+
+        .head{
+            background-color: rgb(250,250,250);
+            width: 100%;
+            height: 100px;
+            border-radius: 10px;
+        }
+        .head_nav {
+            padding: 30px;
+
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+
+            text-decoration-line: none;
+
+        }
+
+        .time {
             font-size: 80px;
             font-weight: bold;
             color: black;
         }
 
-        .greeting{
+        .greeting {
             font-size: 50px;
+
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
+
             color: black;
         }
-        .todo{
+
+        .todo {
             font-size: 30px;
             color: black;
         }
 
-        .author{
+        .author {
             font-size: 25px;
             font-style: italic;
         }
 
-        .main{
+        .main {
             width: 100vw;
             height: 80vh;
 
@@ -59,7 +95,7 @@
             justify-content: center;
         }
 
-        .quoto{
+        .quoto {
             width: 100vw;
             height: 20vh;
 
@@ -70,74 +106,96 @@
             align-items: center;
             justify-content: center;
         }
+
         .B1 {
-                max-width: 500px;
-                width: 80px;
-                height: 80px;
-                background-image: url(Insta_icon.png);
-                background-position: center;
-                background-size: cover;
-                border-radius: 27px;
-                border: solid, 2px, black;
-            }
-            .B2{
-                max-width: 500px;
-                width: 80px;
-                height: 80px;
-                background-image: url(Facebook_icon.png);
-                background-position: center;
-                background-size: cover;
-                border-radius: 27px;
-                border: solid, black;
-            }
-            .B3{
-                max-width: 500px;
-                width: 80px;
-                height: 80px;
-                background-image: url(Mail_icon.png);
-                background-position: center;
-                background-size: 100%;
-                border-radius: 100px;
-                border: solid, black;
-            }
-            
-            .find-btn{
-                display: flex;
+            max-width: 500px;
+            width: 70px;
+            height: 70px;
+            background-image: url(Insta_icon.png);
+            background-position: center;
+            background-size: cover;
+            border-radius: 23px;
+            border: solid, 2px, black;
+        }
+
+        .B2 {
+            max-width: 500px;
+            width: 70px;
+            height: 70px;
+            background-image: url(Facebook_icon.png);
+            background-position: center;
+            background-size: cover;
+            border-radius: 23px;
+            border: solid, black;
+        }
+
+        .B3 {
+            max-width: 500px;
+            width: 70px;
+            height: 70px;
+            background-image: url(Mail_icon.png);
+            background-position: center;
+            background-size: 100%;
+            border-radius: 100px;
+            border: solid, black;
+        }
+
+        .find-btn {
+            display: flex;
             flex-direction: row;
             justify-content: center;
             align-items: center;
 
             margin-top: 10px;
-            }
-            .find-btn > button {
+        }
+
+        .find-btn>button {
             margin-right: 10px;
-            }
-            .find-btn1{
-                text-align: center;
-                display: flex;
-                flex-direction: row;
-                justify-content: center;
-                
-                width: 100px;
-                height: 100px;
-            }
-            .find-btn1 > button {
+        }
+
+        .find-btn1 {
+            text-align: center;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+
+            width: 100px;
+            height: 100px;
+        }
+
+        .find-btn1>button {
             margin-right: 10px;
             margin-top: 10px;
-            }
+        }
     </style>
 </head>
 
 <body>
+    <div class="head">
+        <div class="head_nav">
+            <nav>
+                <ul>
+                    <li><a href="https://www.instagram.com/yong._.211/">Daily instagram</a></li>
+                    <li><a href="https://www.instagram.com/yong._.photography/">Photo instagram</a></li>
+                    <li><a href="https://www.instagram.com/yong._.lettering/">lettering instagram</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+    
     <div class="main">
         <div id="time" class="time">12:00</div>
+        <p>현재기온: <span id="temp">00.0</span>도</p>
         <div class="greeting">Hello World!</div>
         <div class="todo">코딩 공부 하는중</div>
     </div>
     <div class="find-btn">
-        <button class="B1" clatype="button" class="btn btn-navy navbar-btn find-btn1" onclick="location.href='https://www.instagram.com/yong._.211/'"></button>
-        <button class="B2" type="button" class="btn btn-grey navbar-btn find-btn1" onclick="location.href='https://www.facebook.com/profile.php?id=100003667868450'"></button>
-        <button class="B3" type="button" class="btn btn-navy navbar-btn find-btn1" onclick="location.href='mailto: 9702qor@naver.com'"></button>
+        <button class="B1" clatype="button" class="btn btn-navy navbar-btn find-btn1"
+            onclick="location.href='https://www.instagram.com/yong._.211/'"></button>
+        <button class="B2" type="button" class="btn btn-grey navbar-btn find-btn1"
+            onclick="location.href='https://www.facebook.com/profile.php?id=100003667868450'"></button>
+        <button class="B3" type="button" class="btn btn-navy navbar-btn find-btn1"
+            onclick="location.href='mailto: 9702qor@naver.com'"></button>
     </div>
     <div class="quoto">
         <div id="author" class="author">- 명언의 저자 -</div>
